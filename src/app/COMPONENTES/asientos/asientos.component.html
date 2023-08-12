@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventosApp</title>
+</head>
+<body>
+
+    <!--Inicio Header-->
+    <header>
+        <div class="logo">
+          <img src="../../../assets/boleto.png" alt="Logo de la empresa">
+        </div>
+        <nav>
+          <ul>
+            <li><a routerLink="/inicio">Inicio</a></li>
+            <li><a href="#">Conciertos</a></li>
+            <li><a href="#">Eventos Deportivos</a></li>
+            <li><a href="#">Obras de Teatro</a></li>
+          </ul>
+        </nav>
+        
+        <button class="custom-button"><img src="../../../assets/cerrarSesion.png" alt="Icono de Cerrar Sesion" width="30" height="30">Salir</button>
+    </header>
+
+    <div style="position:relative;width:100%;height:150px; ">
+        <div style="background-image: url({{this.eventosDetalle.FOTO}});
+          background-repeat:repeat;
+      width: 100%;
+      height: 150px;
+      
+      -webkit-filter: blur(4px);
+      filter: blur(4px);
+      position:absolute;
+      ">
+          </div> 
+          <div style="position: absolute;
+          top: 50%;
+          left: 50%; 
+          transform: translate(-50%, -50%);">
+          <h1 style="color: rgb(255, 255, 255); text-shadow: 1px 2px 6px rgb(94, 94, 94);
+          
+          ">{{this.eventosDetalle.TITULO}}</h1>
+          </div>
+          
+      </div>
+    <!--Fin Header-->
+   
+<div class="claseBody">
+
+    <!--Inicio Etiquetas-->
+    <ul class="showcase">
+        <li>
+            <div class="seat"></div>
+            <small>N/A</small>
+        </li>
+        <li>
+            <div class="seat seleccionado"></div>
+            <small>Seleccionado</small>
+        </li>
+        <li>
+            <div class="seat ocupado"></div>
+            <small>Ocupado</small>
+        </li>
+    </ul>
+    <!--Fin Etiquetas-->
+
+    <!--Inicio Container-->
+    <div class="container">
+        <p class="escenario">Escenario</p>
+        <div class="screen"></div>
+        <div class="row">
+            <div class="{{this.LSillas[0].STATUS}}" [attr.data-value]=this.LSillas[0].PRECIO>S1</div>
+            <div class="{{this.LSillas[1].STATUS}}" [attr.data-value]=this.LSillas[1].PRECIO>S2</div>
+            <div class="{{this.LSillas[2].STATUS}}" [attr.data-value]=this.LSillas[2].PRECIO>S3</div>
+            <div class="{{this.LSillas[3].STATUS}}" [attr.data-value]=this.LSillas[3].PRECIO>S4</div>
+            <div class="{{this.LSillas[4].STATUS}}" [attr.data-value]=this.LSillas[4].PRECIO>S5</div>
+            <div class="{{this.LSillas[5].STATUS}}" [attr.data-value]=this.LSillas[5].PRECIO>S6</div>
+            <div class="{{this.LSillas[6].STATUS}}" [attr.data-value]=this.LSillas[6].PRECIO>S7</div>
+            <div class="{{this.LSillas[7].STATUS}}" [attr.data-value]=this.LSillas[7].PRECIO>S8</div>
+        </div>
+
+        <div class="row">
+            <div class="{{this.LSillas[8].STATUS}}" [attr.data-value]=this.LSillas[8].PRECIO>P1</div>
+            <div class="{{this.LSillas[9].STATUS}}" [attr.data-value]=this.LSillas[9].PRECIO>P2</div>
+            <div class="{{this.LSillas[10].STATUS}}" [attr.data-value]=this.LSillas[10].PRECIO>P3</div>
+            <div class="{{this.LSillas[11].STATUS}}" [attr.data-value]=this.LSillas[11].PRECIO>P4</div>
+            <div class="{{this.LSillas[12].STATUS}}" [attr.data-value]=this.LSillas[12].PRECIO>P5</div>
+            <div class="{{this.LSillas[13].STATUS}}" [attr.data-value]=this.LSillas[13].PRECIO>P6</div>
+            <div class="{{this.LSillas[14].STATUS}}" [attr.data-value]=this.LSillas[14].PRECIO>P7</div>
+            <div class="{{this.LSillas[15].STATUS}}" [attr.data-value]=this.LSillas[15].PRECIO>P8</div>
+        </div>
+
+        <div class="row">
+            <div class="{{this.LSillas[16].STATUS}}" [attr.data-value]=this.LSillas[16].PRECIO>G1</div>
+            <div class="{{this.LSillas[17].STATUS}}" [attr.data-value]=this.LSillas[17].PRECIO>G2</div>
+            <div class="{{this.LSillas[18].STATUS}}" [attr.data-value]=this.LSillas[18].PRECIO>G3</div>
+            <div class="{{this.LSillas[19].STATUS}}" [attr.data-value]=this.LSillas[19].PRECIO>G4</div>
+            <div class="{{this.LSillas[20].STATUS}}" [attr.data-value]=this.LSillas[20].PRECIO>G5</div>
+            <div class="{{this.LSillas[21].STATUS}}" [attr.data-value]=this.LSillas[21].PRECIO>G6</div>
+            <div class="{{this.LSillas[22].STATUS}}" [attr.data-value]=this.LSillas[22].PRECIO>G7</div>
+            <div class="{{this.LSillas[23].STATUS}}" [attr.data-value]=this.LSillas[23].PRECIO>G8</div>
+        </div>
+
+        <div class="row">
+            <div class="{{this.LSillas[24].STATUS}}" [attr.data-value]=this.LSillas[24].PRECIO>L1</div>
+            <div class="{{this.LSillas[25].STATUS}}" [attr.data-value]=this.LSillas[25].PRECIO>L2</div>
+            <div class="{{this.LSillas[26].STATUS}}" [attr.data-value]=this.LSillas[26].PRECIO>L3</div>
+            <div class="{{this.LSillas[27].STATUS}}" [attr.data-value]=this.LSillas[27].PRECIO>L4</div>
+            <div class="{{this.LSillas[28].STATUS}}" [attr.data-value]=this.LSillas[28].PRECIO>L5</div>
+            <div class="{{this.LSillas[29].STATUS}}" [attr.data-value]=this.LSillas[29].PRECIO>L6</div>
+            <div class="{{this.LSillas[30].STATUS}}" [attr.data-value]=this.LSillas[30].PRECIO>L7</div>
+            <div class="{{this.LSillas[31].STATUS}}" [attr.data-value]=this.LSillas[31].PRECIO>L8</div>
+        </div>
+
+        <div class="row">
+            <div class="{{this.LSillas[32].STATUS}}" [attr.data-value]=this.LSillas[32].PRECIO>V1</div>
+            <div class="{{this.LSillas[33].STATUS}}" [attr.data-value]=this.LSillas[33].PRECIO>V2</div>
+            <div class="{{this.LSillas[34].STATUS}}" [attr.data-value]=this.LSillas[34].PRECIO>V3</div>
+            <div class="{{this.LSillas[35].STATUS}}" [attr.data-value]=this.LSillas[35].PRECIO>V4</div>
+            <div class="{{this.LSillas[36].STATUS}}" [attr.data-value]=this.LSillas[36].PRECIO>V5</div>
+            <div class="{{this.LSillas[37].STATUS}}" [attr.data-value]=this.LSillas[37].PRECIO>V6</div>
+            <div class="{{this.LSillas[38].STATUS}}" [attr.data-value]=this.LSillas[38].PRECIO>V7</div>
+            <div class="{{this.LSillas[39].STATUS}}" [attr.data-value]=this.LSillas[39].PRECIO>V8</div>
+        </div>
+
+        <div class="row">
+            <div class="{{this.LSillas[40].STATUS}}" [attr.data-value]=this.LSillas[40].PRECIO>U1</div>
+            <div class="{{this.LSillas[41].STATUS}}" [attr.data-value]=this.LSillas[41].PRECIO>U2</div>
+            <div class="{{this.LSillas[42].STATUS}}" [attr.data-value]=this.LSillas[42].PRECIO>U3</div>
+            <div class="{{this.LSillas[43].STATUS}}" [attr.data-value]=this.LSillas[43].PRECIO>U4</div>
+            <div class="{{this.LSillas[44].STATUS}}" [attr.data-value]=this.LSillas[44].PRECIO>U5</div>
+            <div class="{{this.LSillas[45].STATUS}}" [attr.data-value]=this.LSillas[45].PRECIO>U6</div>
+            <div class="{{this.LSillas[46].STATUS}}" [attr.data-value]=this.LSillas[46].PRECIO>U7</div>
+            <div class="{{this.LSillas[47].STATUS}}" [attr.data-value]=this.LSillas[47].PRECIO>U8</div>
+        </div>
+
+        <!--Codigo de Probar Solamente-->
+       
+    </div>
+    <!--Fin Container-->
+
+    <p class="text">
+        Has seleccionado <span id="count">0</span> asientos por el precio de $<span id="total">0</span>
+    </p>
+
+    <button class="custom-buttonComprar" (click)="comprobarAsientos()">Comprar</button>
+
+</div>    
+
+</body>
+</html>

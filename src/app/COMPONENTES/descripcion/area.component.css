@@ -1,0 +1,238 @@
+/* Estilos generales */
+* {
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Estilos del encabezado */
+  header {
+    background-color: #17009b;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo img {
+    width: 100px;
+    height: auto;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin-right: 50px;
+  }
+  
+  /*Estilo a menu de navegacion*/
+  
+  nav {
+    padding: 10px;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    display: inline-block;
+  }
+  
+  a {
+    color: #fff;
+    text-decoration: none;
+    padding: 20px;
+  }
+  
+  a:hover {
+    background-color:  #140374a8;
+  }
+  
+  /*Boton Salir*/
+
+  .custom-button {
+    background-color: whitesmoke;
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+  }
+  
+  .custom-button:hover {
+    background-color:  #140374a8;
+    color: white;
+  }
+  
+  .custom-button:active {
+    background-color: #3e8e41;
+    transform: translateY(1px);
+  }
+  
+  /*Estilos del Main*/
+
+  h1 {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+  }
+
+  .container {
+    
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
+    width: 600px;
+  }
+
+  
+  
+  .container img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  /*Diseño Botones*/
+  .button-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .button-container button {
+    margin: 0 5px; /* Ajusta el margen según tus necesidades */
+  }
+
+  .custom-buttonZonas {
+    background-color: whitesmoke;
+    color: black;
+    padding: 5px 10px;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+  }
+  
+  .custom-buttonZonas:hover {
+    background-color:  green;
+    color: white;
+  }
+  
+  .custom-buttonZonas:active {
+    background-color: #3e8e41;
+    transform: translateY(1px);
+  }
+  
+  
+
+
+
+
+
+
+
+
+      /* Estilos para dispositivos de pantalla pequeña */
+      @media only screen and (max-width: 600px) {
+        /* Estilos para el header */
+        header {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        .logo {
+          margin-bottom: 10px;
+        }
+  
+        /*resposivo el menu de navegacion*/
+  
+        nav {
+          display: flex;
+          justify-content: center;
+        }
+        
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          display: flex;
+        }
+        
+        li {
+          margin: 0 10px;
+        }
+        
+        /* Estilos para dispositivos de pantalla pequeña */
+          nav {
+            flex-direction: column;
+            align-items: center;
+          }
+          
+          li {
+            margin: 5px -20px;
+          }
+        /*-------Nav-------------*/
+  
+        .custom-button {
+          margin-top: 10px;
+        }
+        /* Estilos para el contenido principal */
+        main {
+          padding: 10px;
+        }
+  
+        .container {
+          width: 50%;
+        }
+
+        .custom-button {
+            margin-top: 10px;
+          }
+
+      }
+
+
+    /*Estilos Footer*/
+    /* Estilos para el footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  text-align: center;
+}
+
+/* Estilos para el contenido del footer */
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-content img {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+/* Estilos para la versión responsiva del footer */
+@media (max-width: 600px) {
+  .footer-content {
+    flex-direction: column-reverse;
+  }
+
+  .footer-content img {
+    width: 60px;
+  }
+}

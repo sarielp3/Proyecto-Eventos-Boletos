@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EventosApp</title>
+</head>
+<body>
+  <!--Encabezado-->
+  <header>
+    <div class="logo">
+      <img src="../../../assets/boleto.png" alt="Logo de la empresa">
+    </div>
+    <nav>
+      <ul>
+        <li><a routerLink="/inicio">Inicio</a></li>
+        <li><a href="#">Conciertos</a></li>
+        <li><a href="#">Obras de Teatro</a></li>
+      </ul>
+    </nav>
+    <div class="search-bar">
+      <input type="text" placeholder="Buscar...">
+      <button><img src="../../../assets/buscar.png" alt="Icono de búsqueda" width="50" height="40"></button>
+    </div>
+
+    <button (click)="salir()" class="custom-button" ><img src="../../../assets/cerrarSesion.png" alt="Icono de Cerrar Sesion" width="30" height="30">Salir</button>
+  </header>
+  <!--Fin de Encabezado-->
+
+  <!--Contenido Principal-->
+  <main>
+    
+  <h1>Eventos</h1>
+
+  <div class="productos" >
+    <div *ngFor="let listEventos of eventosList">
+      <div class="producto">
+      <a routerLink="/descripcion/{{listEventos.ID_EVENTOS}}">
+        <img src="{{listEventos.FOTO}}" alt="Evento 1">
+      </a>
+      <h3>{{listEventos.TITULO}}</h3>
+    </div>
+    </div>
+    
+    <!--
+    <div class="producto">
+      <a routerLink="/descripcion">
+        <img src="../../../assets/GreenDayConcierto.jpg" alt="Evento 1">
+      </a>
+      <h3>Green Day Concierto CDMX</h3>
+    </div>
+
+    <div class="producto">
+      <a routerLink="/descripcion">
+        <img src="../../../assets/OneDirectionConcierto.jpg" alt="Evento 2">
+      </a>
+      <h3>One Direction Arena Monterrey</h3>
+    </div>
+
+    <div class="producto">
+      <a routerLink="/descripcion">
+        <img src="../../../assets/FestivalMusica.jpg" alt="Evento 3">
+      </a>
+      <h3>Festival Musica Electronica Guadalajara</h3>
+    </div>
+
+    <div class="producto">
+      <a routerLink="/descripcion">
+        <img src="../../../assets/GreenDayConcierto.jpg" alt="Evento 4">
+      </a>
+      <h3>Festival Musica Electronica Guadalajara</h3>
+    </div>
+
+    <div class="producto">
+      <a routerLink="/descripcion">
+        <img src="../../../assets/GunsAndRoses.jpg" alt="Evento 5">
+      </a>
+      <h3>Guns And Roses Los Mochis, Sinaloa</h3>
+    </div>
+
+    <div class="producto">
+      <a routerLink="/descripcion">
+        <img src="../../../assets/MartinGarrix.jpg" alt="Evento 6">
+      </a>
+      <h3>Martin Garrix CDMX</h3>
+    </div>
+-->
+    <!-- Agrega más productos aquí -->
+
+  </div>
+
+
+  </main>
+  <!--Fin de Contenido Principal-->
+
+  <!--Pie de Pagina-->
+  <footer>
+    <div class="footer-content">
+      <img src="../../../assets/concierto.png" alt="Logo Pie Pagina">
+      <p>EventosApp. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+  <!--Fin pie de pagina-->
+
+</body>
+</html>

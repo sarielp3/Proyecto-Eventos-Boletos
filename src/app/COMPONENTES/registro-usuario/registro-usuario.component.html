@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Eventos App</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+   
+<form class="form">
+    <h2 class="form__title">Registrar</h2>
+    <p class="form__paragraph">¿Ya tienes una Cuenta? <a routerLink="/login" class="form__link">Inicia Sesion!</a> </p>
+
+    <div class="form__container">
+        <div class="form__group">
+            <input type="text" id="name" class="form__input" placeholder=" ">
+            <label for="name" class="form__label">Nombre(s):</label>
+            <span class="form__line"></span>
+        </div>
+        <div class="form__group">
+            <input type="text" id="apellido" class="form__input" placeholder=" ">
+            <label for="apellido" class="form__label">Apellido(s):</label>
+            <span class="form__line"></span>
+        </div>
+        <div class="form__group">
+            <input type="text" id="password" class="form__input" placeholder=" ">
+            <label for="password" class="form__label">Contraseña:</label>
+            <span class="form__line"></span>
+        </div>
+
+        <!--<input type="submit" class="form__submit" value="Entrar">-->
+        <button class="form__submit" routerLink="/login">Registrar</button>
+    </div>
+</form>
+
+</body>
+</html>

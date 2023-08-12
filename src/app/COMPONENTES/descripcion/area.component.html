@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventosApp</title>
+</head>
+<body>
+
+  <!--Encabezado-->
+  <header>
+    <div class="logo">
+      <img src="../../../assets/boleto.png" alt="Logo de la empresa">
+    </div>
+    <nav>
+      <ul>
+        <li><a routerLink="/inicio">Inicio</a></li>
+        <li><a href="#">Conciertos</a></li>
+        <li><a href="#">Eventos Deportivos</a></li>
+        <li><a href="#">Obras de Teatro</a></li>
+      </ul>
+    </nav>
+    
+    <button class="custom-button"><img src="../../../assets/cerrarSesion.png" alt="Icono de Cerrar Sesion" width="30" height="30">Salir</button>
+  </header>
+  <!--Fin de Encabezado-->
+
+  <!--Contenido Principal-->
+  <main>
+  
+<div style="position:relative;width:100%;height:340px; ">
+  <div style="background-image: url({{this.eventosDetalle.FOTO}});
+    background-repeat:repeat;
+width: 100%;
+height: 340px;
+
+-webkit-filter: blur(4px);
+filter: blur(4px);
+position:absolute;
+">
+    </div> 
+    <div style="position: absolute;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);">
+    <h1 style="color: rgb(255, 255, 255); text-shadow: 1px 2px 6px rgb(94, 94, 94);
+    
+    ">{{this.eventosDetalle.TITULO}}</h1>
+    </div>
+    
+</div>
+    <div class="container" >
+      <h2>Informacion</h2>
+       <p class="descripcion">{{this.eventosDetalle.DESCRIPCION}}</p>
+    </div>
+
+    <div class="container">
+      <h2>Fecha y Hora Del Evento</h2>
+       <h5>{{this.eventosDetalle.FECHA_HORA | date:'medium'}}</h5>
+    </div>
+
+    <div class="button-container">
+        <button class="custom-buttonZonas" (click)="comprarBoletos()">Comprar Boletos</button>
+    </div>
+      
+      
+
+  </main>
+  <!--Fin Contenido Principal-->
+
+  <br><br>
+
+  <!--Pie de Pagina-->
+  <footer>
+    <div class="footer-content">
+      <img src="../../../assets/concierto.png" alt="Logo Pie Pagina">
+      <p>EventosApp. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+  <!--Fin pie de pagina-->
+
+</body>
+</html>

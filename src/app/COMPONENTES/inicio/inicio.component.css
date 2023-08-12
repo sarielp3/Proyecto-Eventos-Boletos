@@ -1,0 +1,231 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Estilos del encabezado */
+  header {
+    background-color: #17009b;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo img {
+    width: 100px;
+    height: auto;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin-right: 50px;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-bar input[type="text"] {
+    padding: 5px;
+  }
+  
+  .search-bar button {
+    background-color: transparent;
+    border: none;
+    margin-left: -55px;
+    cursor: pointer;
+  }
+
+
+  /*Estilo a menu de navegacion*/
+  
+  nav {
+    padding: 10px;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    display: inline-block;
+  }
+  
+  a {
+    color: #fff;
+    text-decoration: none;
+    padding: 20px;
+  }
+  
+  a:hover {
+    background-color:  #140374a8;
+  }
+  
+  /*Boton Salir*/
+
+  .custom-button {
+    background-color: whitesmoke;
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+  }
+  
+  .custom-button:hover {
+    background-color:  #140374a8;
+    color: white;
+  }
+  
+  .custom-button:active {
+    background-color: #3e8e41;
+    transform: translateY(1px);
+  }
+  
+  /*Resposivo Header/*
+
+    /* Estilos para dispositivos de pantalla pequeña */
+    @media only screen and (max-width: 600px) {
+      /* Estilos para el header */
+      header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .logo {
+        margin-bottom: 10px;
+      }
+
+      /*resposivo el menu de navegacion*/
+
+      /*nav {
+        margin-bottom: 10px;
+      }*/
+
+      nav {
+        display: flex;
+        justify-content: center;
+      }
+      
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+      
+      li {
+        margin: 0 10px;
+      }
+      
+      /* Estilos para dispositivos de pantalla pequeña */
+        nav {
+          flex-direction: column;
+          align-items: center;
+        }
+        
+        li {
+          margin: 5px -20px;
+        }
+      /*-------Nav-------------*/
+
+      .search-bar {
+        margin-bottom: 10px;
+      }
+      .custom-button {
+        margin-top: 10px;
+      }
+      /* Estilos para el contenido principal */
+      main {
+        padding: 10px;
+      }
+
+      .producto {
+        width: 30%;
+      }
+    }
+
+
+    /*Estilos del Main*/
+
+    h1 {
+      font-family: 'Roboto', sans-serif;
+      text-align: center;
+    }
+
+    h3 {
+      font-family: 'Roboto', sans-serif;
+      text-align: center;
+    }
+
+    .productos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .producto {
+      width: 350px;
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+
+    .producto img {
+      width: 270px;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .producto h3 {
+      margin-top: 10px;
+    }
+
+    /*Estilos Footer*/
+    /* Estilos para el footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  text-align: center;
+}
+
+/* Estilos para el contenido del footer */
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-content img {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+/* Estilos para la versión responsiva del footer */
+@media (max-width: 600px) {
+  .footer-content {
+    flex-direction: column-reverse;
+  }
+
+  .footer-content img {
+    width: 60px;
+  }
+}
+
+    
