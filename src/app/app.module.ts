@@ -14,6 +14,8 @@ import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LOCALE_ID } from '@angular/core';
 import { registerLocaleData } from '@angular/common';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatIconModule} from '@angular/material/icon';
 // importar locales
 import localePy from '@angular/common/locales/es-PY';
 import localePt from '@angular/common/locales/pt';
@@ -25,6 +27,7 @@ registerLocaleData(localePy, 'es');
 registerLocaleData(localePt, 'pt');
 registerLocaleData(localeEn, 'en')
 registerLocaleData(localeEsAr, 'es-Ar');
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 @NgModule({
   declarations: [
@@ -43,7 +46,10 @@ registerLocaleData(localeEsAr, 'es-Ar');
     FormsModule,
     ReactiveFormsModule,
     CommonModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatSlideToggleModule
   ],
   providers: [ { provide: LOCALE_ID, useValue: 'es-Ar' }],
   bootstrap: [AppComponent]

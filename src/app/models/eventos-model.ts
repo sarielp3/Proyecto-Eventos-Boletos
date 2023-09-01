@@ -1,9 +1,9 @@
 export class eventos{
     ID_EVENTOS!: number;
-    TITULO!: String;
-    DESCRIPCION!:String;
+    TITULO!: string;
+    DESCRIPCION!:string;
     FECHA_HORA!: Date;
-    STATUS!:String;
-    TIPO_EVENTO!: String;
+    STATUS!:string;
+    TIPO_EVENTO!: string;
     FOTO!:any;
 }

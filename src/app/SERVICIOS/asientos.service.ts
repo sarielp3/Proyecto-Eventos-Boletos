@@ -24,7 +24,7 @@ export class AsientosService {
   obtenerEventoId(id:string):Observable<any> {
     return this.httpClient.get<any>('http://localhost:3000/api/eventos/'+id);
   }
-
+/*
   setToken(token: any) {
     this.cookies.set("token",token);
   }
@@ -34,7 +34,7 @@ export class AsientosService {
 
   getout(){
     this.cookies.delete("token");
-  }
+  } */
 
   setlogin(token: any) {
     this.cookies.set("login",token);
@@ -51,8 +51,12 @@ export class AsientosService {
     return this.httpClient.get<any>('http://localhost:3000/api/login/'+user+'/'+contra);
   }
 
-  crearCuenta(){
+  verfCuenta(correo:string):Observable<any>{
+    return this.httpClient.get<any>('http://localhost:3000/api/verif/'+correo);
+  }
 
+  crearCuenta(datos:any){
+    return this.httpClient.post<any>('http://localhost:3000/api/crear-cuenta', datos );
   }
 
   comprarBoleto(datos:any){

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {sillas} from 'src/app/models/sillas'
 import { ActivatedRoute, Router } from '@angular/router';
 import {eventos} from 'src/app/models/eventos-model';
+import {InfoMail} from 'src/app/models/bodyMail';
 import {boletoCompra} from 'src/app/models/compra-boleto-model';
 import { AsientosService } from 'src/app/SERVICIOS/asientos.service';
 import { JavascriptAsientosService } from 'src/app/SERVICIOS/javascript-asientos.service';
@@ -14,7 +15,7 @@ import { JavascriptAsientosService } from 'src/app/SERVICIOS/javascript-asientos
 export class CompraComponent implements OnInit {
   public asientosSeleccionados:any[] = JSON.parse(localStorage.getItem('asientosSeleccionados') || '');
   public asientos:any[] = [];
-  public total = localStorage.getItem('precioTotal');
+  public total = localStorage.getItem('precioTotal') || '';
   public Devento : eventos = {
     ID_EVENTOS:0,
     TITULO:'',
@@ -26,6 +27,14 @@ export class CompraComponent implements OnInit {
 
   }
 
+  public mail: InfoMail ={
+    correo:'',
+    evento:'',
+    fecha:new Date(),
+    total:'',
+    asientos:[]
+  }
+
   public compraBoleto : boletoCompra = {
     id_evento:0,
     noSilla:'',
@@ -33,7 +42,7 @@ export class CompraComponent implements OnInit {
     id_compra:''
   }
   constructor(private asientosServicio: AsientosService,private activeRoute:ActivatedRoute,private javascriptService: JavascriptAsientosService
-    
+    ,private router:Router
     ){
 
   }
@@ -71,7 +80,17 @@ export class CompraComponent implements OnInit {
   }
 
   enviarCompraCorreo(){
-    
+    var correo = this.asientosServicio.getlogin();
+    this.mail.correo = correo;
+    this.mail.evento = this.Devento.TITULO;
+    this.mail.fecha = this.Devento.FECHA_HORA;
+    this.mail.total = this.total.toString();
+    this.mail.asientos = this.asientos;
+    console.log(this.mail);
+    this.asientosServicio.enviarMail(this.mail).subscribe(data => {
+     
+    }
+    );
   }
 
   comprarBoleto(){
@@ -90,6 +109,10 @@ export class CompraComponent implements OnInit {
     
     console.log("No silla:" + this.compraBoleto.noSilla);
     console.log("id usuario:" + this.compraBoleto.id_usuario);
+
+    this.enviarCompraCorreo();
+    alert("Compra realizada con exito! Recibiras por tu correo la confirmacion de la compra");
+    this.router.navigate(['/inicio']);
   }
 
 }
